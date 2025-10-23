@@ -1,4 +1,5 @@
 import json
+import os
 
 try:
     from anthropic import HUMAN_PROMPT, AI_PROMPT
@@ -166,10 +167,10 @@ def get_deepseek_r1_question_template_answer(question: CodeGenerationProblem):
     return prompt
 
 
-with open("lcb_runner/prompts/few_shot_examples/generation/func.json") as f:
+with open(os.path.join(os.path.dirname(__file__), "few_shot_examples/generation/func.json")) as f:
     func = json.load(f)
 
-with open("lcb_runner/prompts/few_shot_examples/generation/stdin.json") as f:
+with open(os.path.join(os.path.dirname(__file__), "few_shot_examples/generation/stdin.json")) as f:
     stdin = json.load(f)
 
 
