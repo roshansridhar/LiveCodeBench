@@ -22,3 +22,6 @@ dependencies = [
 where = ["."]
 include = ["lcb_runner*"]
 namespaces = false
+
+[tool.setuptools.package-data]
+"lcb_runner" = ["prompts/few_shot_examples/**/*"]
